@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.16/sweetalert2.min.css"
+        integrity="sha512-NvuRGlPf6cHpxQqBGnPe7fPoACpyrjhlSNeXVUY7BZAj1nNhuNpRBq3osC4yr2vswUEuHq2HtCsY2vfLNCndYA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="stdId" class="form-label mt-2">Student Id <span class="text-danger-emphasis">*</span></label>
+            <input type="text" class="form-control" id="stdId">
+            <div id="stdIdDetails" class="text-danger small d-none">*ID Must Starts With Capital Letter Character Followed By Numbers. (Only 1 to 9 numbers)</div>
+
+            <label for="stdName" class="form-label">Student Name <span class="text-danger-emphasis">*</span></label>
+            <input type="text" class="form-control" id="stdName">
+            <div id="stdNameDetails" class="text-danger small d-none">*Name Must Include Only Letters. (From 3 To 30 Letter Including Spaces)</div>
+
+            <label for="stdEmail" class="form-label">Student Email <span class="text-danger-emphasis">*</span></label>
+            <input type="email" class="form-control" id="stdEmail">
+            <div id="stdEmailDetails" class="text-danger small d-none">*Emial Like Any Email , Nothing New Baby.</div>
+
+            <label for="stdPhone" class="form-label">Student Phone-Number <span class="text-danger-emphasis">*</span></label>
+            <input type="text" class="form-control" id="stdPhone">
+            <div id="stdPhoneDetails" class="text-danger small d-none">*Phone Number Like That +xxx-xxxxxxxxx.</div>
+
+            <label for="stdCollege" class="form-label">College <span class="text-danger-emphasis">*</span></label>
+            <input type="text" class="form-control" id="stdCollege">
+            <div id="stdCollegeDetails" class="text-danger small d-none">*College Name Must Be Between 2 To 20 Letter. </div>
+
+            <label for="stdStudy" class="form-label">Student specialize <span class="text-danger-emphasis">*</span></label>
+            <input type="text" class="form-control" id="stdStudy">
+            <div id="stdSpecializeDetails" class="text-danger small d-none">*Student specialize Must Be Between 2 To 20 Letter. </div>
+
+            <input type="submit" value="Add Student" disabled class="btn btn-primary mt-4" id="submitBtn">
+            <button type="submit" class="btn btn-secondary mt-4" id="clrBtn">Clear</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <input type="search" name="" id="search" placeholder="Search Std.." class="form-control my-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>College</th>
+                    <th>specialize</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">Delete All</button>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.16/sweetalert2.all.min.js"
+        integrity="sha512-4tvE14sHIcdIHl/dUdMHp733PI6MpYA7BDnDfndQmx7aIovEkW+LfkonVO9+NPWP1jYzmrqXJMIT2tECv1TsEQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custome JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
