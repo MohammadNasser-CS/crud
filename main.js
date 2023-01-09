@@ -199,7 +199,7 @@ function updateStudent() {
 
 // student ID 
 stdId.onkeyup = function () {
-  var pattern = /^[A-Z]{1}[0-9]{1,9}$/;
+  var pattern = /^[0-9]{1,9}$/;
   if (pattern.test(stdId.value)) {
     if (stdId.classList.contains("is-invalid") && document.getElementById('stdIdDetails').classList.contains('d-block')) {
       stdId.classList.replace("is-invalid", "is-valid");
@@ -267,7 +267,6 @@ stdEmail.onkeyup=function(){
 }
 
 // Student Phone
-//
 stdPhone.onkeyup=function(){
   var pattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   if (pattern.test(stdPhone.value)) {
