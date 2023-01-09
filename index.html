@@ -13,42 +13,48 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body style="background-color:#ffe68a;">
     <div class="container">
         <form>
             <label for="stdId" class="form-label mt-2">Student Id <span class="text-danger-emphasis">*</span></label>
             <input type="text" class="form-control" id="stdId">
-            <div id="stdIdDetails" class="text-danger small d-none">*ID Must Be Only Numbers. (From 1 to 10 numbers)</div>
+            <div id="stdIdDetails" class="text-danger small d-none">*ID Must Be Only Numbers. (From 1 to 10 numbers)
+            </div>
 
             <label for="stdName" class="form-label">Student Name <span class="text-danger-emphasis">*</span></label>
             <input type="text" class="form-control" id="stdName">
-            <div id="stdNameDetails" class="text-danger small d-none">*Name Must Include Only Letters. (From 3 To 30 Letter Including Spaces)</div>
+            <div id="stdNameDetails" class="text-danger small d-none">*Name Must Include Only Letters. (From 3 To 30
+                Letter Including Spaces)</div>
 
             <label for="stdEmail" class="form-label">Student Email <span class="text-danger-emphasis">*</span></label>
             <input type="email" class="form-control" id="stdEmail">
             <div id="stdEmailDetails" class="text-danger small d-none">*Emial Like Any Email , Nothing New Baby.</div>
 
-            <label for="stdPhone" class="form-label">Student Phone-Number <span class="text-danger-emphasis">*</span></label>
+            <label for="stdPhone" class="form-label">Student Phone-Number <span
+                    class="text-danger-emphasis">*</span></label>
             <input type="text" class="form-control" id="stdPhone">
             <div id="stdPhoneDetails" class="text-danger small d-none">*Phone Number Like That +xxx-xxxxxxxxx.</div>
 
             <label for="stdCollege" class="form-label">College <span class="text-danger-emphasis">*</span></label>
             <input type="text" class="form-control" id="stdCollege">
-            <div id="stdCollegeDetails" class="text-danger small d-none">*College Name Must Be Between 2 To 20 Letter. </div>
+            <div id="stdCollegeDetails" class="text-danger small d-none">*College Name Must Be Between 2 To 20 Letter.
+            </div>
 
-            <label for="stdStudy" class="form-label">Student specialize <span class="text-danger-emphasis">*</span></label>
+            <label for="stdStudy" class="form-label">Student specialize <span
+                    class="text-danger-emphasis">*</span></label>
             <input type="text" class="form-control" id="stdStudy">
-            <div id="stdSpecializeDetails" class="text-danger small d-none">*Student specialize Must Be Between 2 To 20 Letter. </div>
+            <div id="stdSpecializeDetails" class="text-danger small d-none">*Student specialize Must Be Between 2 To 20
+                Letter. </div>
 
             <input type="submit" value="Add Student" disabled class="btn btn-primary mt-4" id="submitBtn">
-            <button type="submit" class="btn btn-secondary mt-4" id="clrBtn">Clear</button>
+            <button type="reset" class="btn btn-secondary mt-4" id="clrBtn">Clear</button>
         </form>
     </div>
 
     <div class="container">
         <input type="search" name="" id="search" placeholder="Search Std.." class="form-control my-3">
-        <table class="table table-striped">
-            <thead>
+        <table class="table table-striped ">
+            <thead class="table-dark">
                 <tr>
                     <th>#</th>
                     <th>Id</th>
@@ -62,7 +68,7 @@
                 </tr>
             </thead>
             <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">Delete All</button>
-            <tbody id="table-body">
+            <tbody id="table-body" class="table-group-divider table-success">
 
             </tbody>
         </table>
