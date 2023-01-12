@@ -170,6 +170,7 @@ function getStudent(id) {
       submitBtn.value = "Update Student";
     }
   }
+  submitBtn.removeAttribute("disabled");
 }
 
 // Update Record By Id .
@@ -197,151 +198,226 @@ function updateStudent() {
 
 // Validation Part
 
-// student ID 
+// student ID
 stdId.onkeyup = function () {
   var pattern = /^[0-9]{1,9}$/;
   if (pattern.test(stdId.value)) {
-    if (stdId.classList.contains("is-invalid") && document.getElementById('stdIdDetails').classList.contains('d-block')) {
+    if (
+      stdId.classList.contains("is-invalid") &&
+      document.getElementById("stdIdDetails").classList.contains("d-block")
+    ) {
       stdId.classList.replace("is-invalid", "is-valid");
-      document.getElementById('stdIdDetails').classList.replace('d-block','d-none');
+      document
+        .getElementById("stdIdDetails")
+        .classList.replace("d-block", "d-none");
     } else {
       stdId.classList.add("is-valid");
     }
     submitBtn.removeAttribute("disabled");
   } else {
-    if (stdId.classList.contains("is-valid") && document.getElementById('stdIdDetails').classList.contains('d-none')) {
+    if (
+      stdId.classList.contains("is-valid") &&
+      document.getElementById("stdIdDetails").classList.contains("d-none")
+    ) {
       stdId.classList.replace("is-valid", "is-invalid");
-      document.getElementById('stdIdDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdIdDetails")
+        .classList.replace("d-none", "d-block");
     } else {
       stdId.classList.add("is-invalid");
-      document.getElementById('stdIdDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdIdDetails")
+        .classList.replace("d-none", "d-block");
     }
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute("disabled", "disabled");
   }
 };
 
 // Student Name .
-stdName.onkeyup=function(){
+stdName.onkeyup = function () {
   var pattern = /^[A-Z\sa-z]{3,30}$/;
   if (pattern.test(stdName.value)) {
-    if (stdName.classList.contains("is-invalid") && document.getElementById('stdNameDetails').classList.contains('d-block')) {
-      document.getElementById('stdNameDetails').classList.replace('d-block','d-none');
+    if (
+      stdName.classList.contains("is-invalid") &&
+      document.getElementById("stdNameDetails").classList.contains("d-block")
+    ) {
+      document
+        .getElementById("stdNameDetails")
+        .classList.replace("d-block", "d-none");
       stdName.classList.replace("is-invalid", "is-valid");
     } else {
       stdName.classList.add("is-valid");
     }
     submitBtn.removeAttribute("disabled");
   } else {
-    if (stdName.classList.contains("is-valid") && document.getElementById('stdNameDetails').classList.contains('d-none')) {
+    if (
+      stdName.classList.contains("is-valid") &&
+      document.getElementById("stdNameDetails").classList.contains("d-none")
+    ) {
       stdName.classList.replace("is-valid", "is-invalid");
-      document.getElementById('stdNameDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdNameDetails")
+        .classList.replace("d-none", "d-block");
     } else {
-      document.getElementById('stdNameDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdNameDetails")
+        .classList.replace("d-none", "d-block");
       stdName.classList.add("is-invalid");
     }
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute("disabled", "disabled");
   }
-}
+};
 
 // Student Email .
-stdEmail.onkeyup=function(){
+stdEmail.onkeyup = function () {
   var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (pattern.test(stdEmail.value)) {
-    if (stdEmail.classList.contains("is-invalid") && document.getElementById('stdEmailDetails').classList.contains('d-block')) {
+    if (
+      stdEmail.classList.contains("is-invalid") &&
+      document.getElementById("stdEmailDetails").classList.contains("d-block")
+    ) {
       stdEmail.classList.replace("is-invalid", "is-valid");
-      document.getElementById('stdEmailDetails').classList.replace('d-block','d-none');
+      document
+        .getElementById("stdEmailDetails")
+        .classList.replace("d-block", "d-none");
     } else {
       stdEmail.classList.add("is-valid");
     }
     submitBtn.removeAttribute("disabled");
   } else {
-    if (stdEmail.classList.contains("is-valid") && document.getElementById('stdEmailDetails').classList.contains('d-none')) {
+    if (
+      stdEmail.classList.contains("is-valid") &&
+      document.getElementById("stdEmailDetails").classList.contains("d-none")
+    ) {
       stdEmail.classList.replace("is-valid", "is-invalid");
-      document.getElementById('stdEmailDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdEmailDetails")
+        .classList.replace("d-none", "d-block");
     } else {
       stdEmail.classList.add("is-invalid");
-      document.getElementById('stdEmailDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdEmailDetails")
+        .classList.replace("d-none", "d-block");
     }
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute("disabled", "disabled");
   }
-}
+};
 
 // Student Phone
-stdPhone.onkeyup=function(){
+stdPhone.onkeyup = function () {
   var pattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   if (pattern.test(stdPhone.value)) {
-    if (stdPhone.classList.contains("is-invalid") && document.getElementById('stdPhoneDetails').classList.contains('d-block')) {
+    if (
+      stdPhone.classList.contains("is-invalid") &&
+      document.getElementById("stdPhoneDetails").classList.contains("d-block")
+    ) {
       stdPhone.classList.replace("is-invalid", "is-valid");
-      document.getElementById('stdPhoneDetails').classList.replace('d-block','d-none');
+      document
+        .getElementById("stdPhoneDetails")
+        .classList.replace("d-block", "d-none");
     } else {
       stdPhone.classList.add("is-valid");
     }
     submitBtn.removeAttribute("disabled");
   } else {
-    if (stdPhone.classList.contains("is-valid") && document.getElementById('stdPhoneDetails').classList.contains('d-none')) {
+    if (
+      stdPhone.classList.contains("is-valid") &&
+      document.getElementById("stdPhoneDetails").classList.contains("d-none")
+    ) {
       stdPhone.classList.replace("is-valid", "is-invalid");
-      document.getElementById('stdPhoneDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdPhoneDetails")
+        .classList.replace("d-none", "d-block");
     } else {
       stdPhone.classList.add("is-invalid");
-      document.getElementById('stdPhoneDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdPhoneDetails")
+        .classList.replace("d-none", "d-block");
     }
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute("disabled", "disabled");
   }
-}
+};
 
 // Student College
-stdCollege.onkeyup=function(){
+stdCollege.onkeyup = function () {
   var pattern = /^[A-Z\sa-z]{2,20}$/;
   if (pattern.test(stdCollege.value)) {
-    if (stdCollege.classList.contains("is-invalid") && document.getElementById('stdCollegeDetails').classList.contains('d-block')) {
+    if (
+      stdCollege.classList.contains("is-invalid") &&
+      document.getElementById("stdCollegeDetails").classList.contains("d-block")
+    ) {
       stdCollege.classList.replace("is-invalid", "is-valid");
-      document.getElementById('stdCollegeDetails').classList.replace('d-block','d-none');
+      document
+        .getElementById("stdCollegeDetails")
+        .classList.replace("d-block", "d-none");
     } else {
       stdCollege.classList.add("is-valid");
     }
     submitBtn.removeAttribute("disabled");
   } else {
-    if (stdCollege.classList.contains("is-valid") && document.getElementById('stdCollegeDetails').classList.contains('d-none')) {
+    if (
+      stdCollege.classList.contains("is-valid") &&
+      document.getElementById("stdCollegeDetails").classList.contains("d-none")
+    ) {
       stdCollege.classList.replace("is-valid", "is-invalid");
-      document.getElementById('stdCollegeDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdCollegeDetails")
+        .classList.replace("d-none", "d-block");
     } else {
       stdCollege.classList.add("is-invalid");
-      document.getElementById('stdCollegeDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdCollegeDetails")
+        .classList.replace("d-none", "d-block");
     }
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute("disabled", "disabled");
   }
-}
+};
 
 // Student Study
-stdStudy.onkeyup=function(){
+stdStudy.onkeyup = function () {
   var pattern = /^[A-Z\sa-z]{2,20}$/;
   if (pattern.test(stdStudy.value)) {
-    if (stdStudy.classList.contains("is-invalid") && document.getElementById('stdSpecializeDetails').classList.contains('d-block')) {
+    if (
+      stdStudy.classList.contains("is-invalid") &&
+      document
+        .getElementById("stdSpecializeDetails")
+        .classList.contains("d-block")
+    ) {
       stdStudy.classList.replace("is-invalid", "is-valid");
-      document.getElementById('stdSpecializeDetails').classList.replace('d-block','d-none');
+      document
+        .getElementById("stdSpecializeDetails")
+        .classList.replace("d-block", "d-none");
     } else {
       stdStudy.classList.add("is-valid");
     }
     submitBtn.removeAttribute("disabled");
   } else {
-    if (stdStudy.classList.contains("is-valid") && document.getElementById('stdSpecializeDetails').classList.contains('d-none')) {
+    if (
+      stdStudy.classList.contains("is-valid") &&
+      document
+        .getElementById("stdSpecializeDetails")
+        .classList.contains("d-none")
+    ) {
       stdStudy.classList.replace("is-valid", "is-invalid");
-      document.getElementById('stdSpecializeDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdSpecializeDetails")
+        .classList.replace("d-none", "d-block");
     } else {
       stdStudy.classList.add("is-invalid");
-      document.getElementById('stdSpecializeDetails').classList.replace('d-none','d-block');
+      document
+        .getElementById("stdSpecializeDetails")
+        .classList.replace("d-none", "d-block");
     }
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute("disabled", "disabled");
   }
-}
-
+};
 
 // Clear Validation Classes After Adding Or Ubdating .
-function clearClass(){
-  stdId.classList.remove('is-valid');
-  stdName.classList.remove('is-valid');
-  stdEmail.classList.remove('is-valid');
-  stdPhone.classList.remove('is-valid');
-  stdCollege.classList.remove('is-valid');
-  stdStudy.classList.remove('is-valid');
+function clearClass() {
+  stdId.classList.remove("is-valid");
+  stdName.classList.remove("is-valid");
+  stdEmail.classList.remove("is-valid");
+  stdPhone.classList.remove("is-valid");
+  stdCollege.classList.remove("is-valid");
+  stdStudy.classList.remove("is-valid");
 }
